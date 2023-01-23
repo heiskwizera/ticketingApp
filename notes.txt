@@ -1,0 +1,70 @@
+  // SafeAreaView : Special type of view to avoid content is within safe area(Out of notch)
+
+
+Touchables
+   <TouchableWithoutFeedback onPress={handleImageTouch}>
+        <Image source={image} style={styles.images} />
+      </TouchableWithoutFeedback>
+
+      <TouchableOpacity>
+        <Image source={image} style={styles.images} />
+      </TouchableOpacity>
+
+      <TouchableHighlight>
+        <Image source={image} style={styles.images} />
+      </TouchableHighlight>
+
+
+Internet Image
+ <Image
+        blurRadius={10}
+        fadeDuration={1000} // Only on android {FadeEffect}
+        source={{ uri: "https://picsum.photos/150/150", width: 60, height: 60 }} />
+
+Local Image
+ <Image source={require("./assets/icon.png")} />
+
+Text
+      <Text numberOfLines={1} onPress={handlePress}>Hello React Native - A really really long text. Now I wanna make it even longer text than before</Text>
+      Text Properties
+      numberOfLines : truncate it if text covers the whole width
+
+
+Alert API : is an object that has a bunch of methods that we can use to show different types of alerts to the user
+  Alert.alert("My Title", "My Message", [
+    { text: "Yes", onPress: () => console.log("Yes") },
+    { text: "No", onPress: () => console.log("No") },
+  ]);
+
+  Or (Prompt only works for IOS)
+    Alert.prompt("My Title", "My Message", (text) => console.log(text));
+
+For Android : use react-native-prompt-android package
+npm i react-native-prompt-android --save and link it or 
+expo install react-native-prompt-android
+
+import prompt from 'react-native-prompt-android';
+prompt(
+    'Enter password',
+    'Enter your password to claim your $1.5B in lottery winnings',
+    [
+     {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+     {text: 'OK', onPress: password => console.log('OK Pressed, password: ' + password)},
+    ],
+    {
+        type: 'secure-text',
+        cancelable: false,
+        defaultValue: 'test',
+        placeholder: 'placeholder'
+    }
+);
+
+PressableText
+  <PressableText
+        text="Pressable Text"
+        onPress={() => console.log("Text Pressed")}
+        style={{ color: "red", fontSize: 20 }}
+      />
+      ])
+    
+    
