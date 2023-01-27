@@ -1,0 +1,8 @@
+
+Icons : logo-google, logo-amazon, logo-instagram, logo-whatsapp
+jobTitle Product Designer
+jobLocation United Nations
+MinSalary ex :  122k
+MaxSalary ex : 22k
+Per time ex: Monthly
+
