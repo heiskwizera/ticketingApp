@@ -11,7 +11,6 @@ import {
   ScrollView
 } from "react-native";
 
-// Create user profile screen component with name, email, profile picture, and bio fields that are editable
 const UserProfileScreen = () => {
   const [name, setName] = useState("Fabrice");
   const [email, setEmail] = useState("he.kwizera@gmail.com");
@@ -48,7 +47,6 @@ const UserProfileScreen = () => {
         <TextInput style={styles.bioInput} onChangeText={setBio} value={bio} />
       </View>
 
-      {/* Save changes */}
       <Pressable
         style={{
           backgroundColor: "blue",

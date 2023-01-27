@@ -3,15 +3,13 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
 
 
-// ui Login Screen with google and facebook login small buttons and a login button with a text input for email and password and a forgot password button and a sign up button
+
 export default function LoginScreen() {
     const navigation = useNavigation();
     return (
 
         <View style={styles.container}>
         <View style={styles.loginContainer}>
-
-            {/* Header JobLin and load Image as logo of app  */}
         
             <Image
             style={{ width: 152, height: 110 }}

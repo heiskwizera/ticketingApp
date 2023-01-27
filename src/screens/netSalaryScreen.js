@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
 
-// netSalaryCalculator component where  Maximum salary is 100000 per month and minimum salary is 30000 per month, input salary and calculate net salary where minimum tax is 20% and maximum tax is 30. below 30000 is 0% tax and above 100000 is 30% tax, Validate input salary and show error message if input salary is not valid.
-
 const NetSalaryCalculator = () => {
     const [salary, setSalary] = useState(0);
     const [tax, setTax] = useState(0);
@@ -12,7 +10,7 @@ const NetSalaryCalculator = () => {
     
     const calculateNetSalary = () => {
 
-        // Reset the tax and net salary
+        
         setTax(0);
         setNetSalary(0);
         setError("");
